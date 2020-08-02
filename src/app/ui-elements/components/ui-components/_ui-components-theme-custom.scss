@@ -1,0 +1,27 @@
+@import "./../../../../styles/settings/colors.scss";
+@mixin ui-components-theme-custom($theme) {
+    $background: map-get($theme, "background");
+    $foreground: map-get($theme, foreground);
+    $primary: map-get($theme, "primary");
+    $accent: map-get($theme, "accent");
+    .cards-stack   .cell {
+        .trimmed-label p,
+        .value-text {
+            color: mat-color($foreground, text) !important;
+            fill: mat-color($foreground, text) !important;
+        }
+    }
+    .cards-stack   .card {
+        fill: mat-color($background, card) !important;
+    }
+    .line-chart-popularity {
+        &   g,
+        &   rect {
+            fill: mat-color($accent) !important;
+            color: mat-color($accent) !important;
+        }
+        &   path.line {
+            stroke: mat-color($primary) !important;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<div class="grid-icons" [ngClass]="{ 'large': large }">
+  <div class="grid-icon" *ngFor="let icon of icons; let i = index;">
+    <mat-icon [color]="icon.color">{{ icon.name }}</mat-icon>
+    <p *ngIf="icon.text">
+      {{ icon.text }}
+    </p>
+  </div>
+</div>

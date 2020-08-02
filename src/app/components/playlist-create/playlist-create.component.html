@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Playlist: {{data.name}}</h1>
+<div mat-dialog-content>
+  <input type="text" matInput tabindex="1" [(ngModel)]="data.name">
+  <mat-list>
+    <mat-list-item>
+      <label mat-mini-fab mat-list-avatar>
+        <a aria-role="button" class="upload-image" mat-button mat-raised-button color="accent" tabindex="2" (click)="submitDialog()">
+          Upload image
+        </a>
+        <input #file type="file" (change)="onFileChange($event)" [style.display]="'none'">
+      </label>
+      <h4 mat-line class="file-text">
+        <span>{{file.value}}</span>
+      </h4>
+    </mat-list-item>
+  </mat-list>
+</div>
+<br/>
+<div mat-dialog-actions>
+  <button mat-button color="primary" tabindex="2" (click)="submitDialog()">
+    <mat-icon>done_all</mat-icon> Ok
+  </button>
+  <button mat-button (click)="onNoClick()" tabindex="-1">No Thanks</button>
+</div>

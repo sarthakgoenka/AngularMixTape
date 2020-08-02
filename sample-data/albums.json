@@ -1,0 +1,146 @@
+{
+    "jason-derulo": {
+        "album-1": {
+            "id": "album-1",
+            "name": "Together on the sand",
+            "image": "assets/images/albums/1.jpg"
+        },
+        "album-2": {
+            "id": "album-2",
+            "name": "Hello old friend",
+            "image": "assets/images/albums/2.jpg"
+        }
+    },
+    "keane": {
+        "album-3": {
+            "id": "album-3",
+            "name": "Teenagers alive",
+            "image": "assets/images/albums/3.jpg"
+        },
+        "album-4": {
+            "id": "album-4",
+            "name": "The single last stance ",
+            "image": "assets/images/albums/4.jpg"
+        }
+    },
+    "kingofthemood": {
+        "album-5": {
+            "id": "album-5",
+            "name": "Make us proud",
+            "image": "assets/images/albums/5.jpg"
+        },
+        "album-6": {
+            "id": "album-6",
+            "name": "Snatch the distance",
+            "image": "assets/images/albums/6.jpg"
+        }
+    },
+    "lafiestanegra": {
+        "album-7": {
+            "id": "album-7",
+            "name": "No limits",
+            "image": "assets/images/albums/7.jpg"
+        },
+        "album-8": {
+            "id": "album-8",
+            "name": "Hold the door",
+            "image": "assets/images/albums/8.jpg"
+        }
+    },
+    "lecrea-gravity": {
+        "album-9": {
+            "id": "album-9",
+            "name": "United we stand",
+            "image": "assets/images/albums/9.jpg"
+        },
+        "album-10": {
+            "id": "album-10",
+            "name": "Zero bellow the water",
+            "image": "assets/images/albums/10.jpg"
+        }
+    },
+    "led-zeppelin": {
+        "album-11": {
+            "id": "album-11",
+            "name": "Baking up the oven",
+            "image": "assets/images/albums/11.jpg"
+        },
+        "album-12": {
+            "id": "album-12",
+            "name": "Waking up the neightboors",
+            "image": "assets/images/albums/12.jpg"
+        }
+    },
+    "mark-ronson": {
+        "album-13": {
+            "id": "album-13",
+            "name": "Broke on the inside",
+            "image": "assets/images/albums/13.jpg"
+        },
+        "album-14": {
+            "id": "album-14",
+            "name": "Start the preparations",
+            "image": "assets/images/albums/14.jpg"
+        }
+    },
+    "monty-are-i": {
+        "album-15": {
+            "id": "album-15",
+            "name": "Sangus among us",
+            "image": "assets/images/albums/15.jpg"
+        },
+        "album-16": {
+            "id": "album-16",
+            "name": "Barbaric uprise",
+            "image": "assets/images/albums/16.jpg"
+        }
+    },
+    "pharel-williams": {
+        "album-17": {
+            "id": "album-17",
+            "name": "Treat us well",
+            "image": "assets/images/albums/17.jpg"
+        },
+        "album-18": {
+            "id": "album-18",
+            "name": "We are the youth",
+            "image": "assets/images/albums/18.jpg"
+        }
+    },
+    "pink-floyd": {
+        "album-19": {
+            "id": "album-19",
+            "name": "Bring them on",
+            "image": "assets/images/albums/19.jpg"
+        },
+        "album-20": {
+            "id": "album-20",
+            "name": "Standing tall when we need",
+            "image": "assets/images/albums/20.jpg"
+        }
+    },
+    "rolling-stones": {
+        "album-21": {
+            "id": "album-21",
+            "name": "Carry on",
+            "image": "assets/images/albums/21.jpg"
+        },
+        "album-22": {
+            "id": "album-22",
+            "name": "We need this",
+            "image": "assets/images/albums/22.jpg"
+        }
+    },
+    "wativ": {
+        "album-23": {
+            "id": "album-23",
+            "name": "Crank it now",
+            "image": "assets/images/albums/23.jpg"
+        },
+        "album-24": {
+            "id": "album-24",
+            "name": "Shy on the rose",
+            "image": "assets/images/albums/24.jpg"
+        }
+    }
+}

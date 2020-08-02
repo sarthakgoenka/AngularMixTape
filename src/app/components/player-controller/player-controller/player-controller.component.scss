@@ -1,0 +1,158 @@
+@import "./../../../../styles/settings/breakpoints.scss";
+$height: 80px;
+:host {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    .controller-wrapper {
+        height: auto;
+        padding: 10px 0 0 0;
+        @include breakpoint($narrow-devices) {
+            height: $height;
+            padding: 10px 0px 0px 75px;
+        }
+    }
+}
+
+.player-controller {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 4px 20px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    @include breakpoint($narrow-devices) {
+        height: $height;
+        flex-direction: row;
+        padding: {
+            left: 20px;
+            right: 20px;
+        }
+    }
+    &.collapsed {
+        .player-controls,
+        .player-secondary-controls {
+            height: 0px;
+            margin: 0;
+            overflow: hidden;
+        }
+        .expand-button {
+            transform: rotate(180deg);
+            margin: 0;
+        }
+        .player-current-song-info {
+            .song-image {
+                height: 0px;
+                margin: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.player-button {
+    margin: {
+        left: 20px;
+        right: 20px;
+    }
+}
+
+.player-current-song-info {
+    flex: 1;
+    font-size: 0.9rem;
+    margin: {
+        top: 10px;
+        bottom: 10px;
+    }
+    @include breakpoint($narrow-devices) {
+        margin: 0;
+    }
+    div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include breakpoint($narrow-devices) {
+            flex-direction: row;
+        }
+        .song-image {
+            text-align: center;
+            margin: {
+                bottom: 10px;
+            }
+            @include breakpoint($narrow-devices) {
+                margin: {
+                    right: 20px;
+                    bottom: 0;
+                    top: 0px;
+                }
+            }
+        }
+        img {
+            max-width: 60px;
+            border-radius: 2px;
+        }
+    }
+}
+
+.player-controls {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    margin: {
+        top: 20px;
+        bottom: 20px;
+    }
+    @include breakpoint($narrow-devices) {
+        margin: {
+            top: 0px;
+            bottom: 0px;
+        }
+    }
+}
+
+.player-secondary-controls {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: {
+        top: 20px;
+        bottom: 20px;
+    }
+    height: 20px;
+    @include breakpoint($narrow-devices) {
+        margin: {
+            top: 0px;
+            bottom: 0px;
+        }
+        height: auto;
+    }
+}
+
+.show-queue {
+    margin-right: 20px;
+    display: none;
+    @include breakpoint($narrow-devices) {
+        display: flex;
+    }
+}
+
+.player-volume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expand-button {
+    margin: {
+        top: 10px;
+        bottom: 20px;
+    }
+    @include breakpoint($narrow-devices) {
+        display: none;
+    }
+}

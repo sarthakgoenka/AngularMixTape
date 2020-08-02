@@ -1,0 +1,19 @@
+<div class="login">
+  <div>
+    <a class="main-logo" [routerLink]="'/'">
+      <mat-icon color="primary">adjust</mat-icon>
+      <span class="app-title"> Zondimo</span>
+    </a>
+  </div>
+  <div class="form-container">
+    <mat-card class="login-card">
+      <h1 class="main-title">
+        Login
+      </h1>
+      <p class="subtext">
+        Access zondimo using your social media networks.
+      </p>
+      <button color="primary" mat-raised-button (click)="signInWithGoogle()">Login with Google</button>
+    </mat-card>
+  </div>
+</div>

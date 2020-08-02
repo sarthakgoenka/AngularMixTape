@@ -1,0 +1,35 @@
+<mat-card class="playable-list-card">
+  <div class="header">
+    <div class="header-image" *ngIf="image">
+      <img [src]="image" [title]="title" [alt]="title" />
+    </div>
+    <div class="header-info">
+      <h3 class="title">
+        {{title}}
+      </h3>
+      <div class="header-info__info">
+        {{info}}
+      </div>
+      <div class="playble-list-actions">
+        <ng-content select=".play-actions"></ng-content>
+      </div>
+    </div>
+    <button *ngIf="playAllExists" class="play-all-button" (click)="playAll()" mat-mini-fab color="primary">
+      <mat-icon class="mat-24" aria-label="Play all">play_arrow</mat-icon>
+    </button>
+    <button *ngIf="removeAllExists" class="play-all-button" (click)="removeAll()" mat-mini-fab color="primary">
+      <mat-icon class="mat-24" aria-label="Play all">clear</mat-icon>
+    </button>
+  </div>
+  <div class="song-list">
+    <div *ngFor="let song of songs" class="song-item">
+      <button class="play-song" (click)="playItem(song)">
+        <mat-icon class="mat-24" aria-label="Play entire album">play_circle_outline</mat-icon>
+      </button>
+      {{song.name}}
+      <div class="spacer"></div>
+      <ng-template *ngTemplateOutlet="itemTemplate; context: { $implicit: song }">
+      </ng-template>
+    </div>
+  </div>
+</mat-card>

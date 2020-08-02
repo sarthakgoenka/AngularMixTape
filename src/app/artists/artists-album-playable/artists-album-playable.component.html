@@ -1,0 +1,22 @@
+<app-playable-list [image]="album.image" [title]="album.name" [info]="info" [songs]="songs" (onPlayall)="playAlbum()" (onPlayItem)="playSong($event)">
+  <div class="play-actions">
+    <mat-icon class="mat-24" aria-label="Share">share</mat-icon>
+    <mat-icon class="mat-24" aria-label="like">settings_backup_restore</mat-icon>
+    <mat-icon class="mat-24" aria-label="like">favorite_border</mat-icon>
+  </div>
+  <ng-template let-song>
+    <button class="add-to-playlist-button" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button *ngIf="(user | async).authenticated" mat-menu-item (click)="addSongToPlaylist(song)">
+        <mat-icon>playlist_add</mat-icon>
+        <span>Add to playlist</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>tap_and_play</mat-icon>
+        <span>Play on device</span>
+      </button>
+    </mat-menu>
+  </ng-template>
+</app-playable-list>

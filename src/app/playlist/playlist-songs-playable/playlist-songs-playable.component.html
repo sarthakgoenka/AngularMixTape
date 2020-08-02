@@ -1,0 +1,19 @@
+<app-playable-list [image]="playlist.image" [title]="playlist.name" [info]="info" [songs]="songs" (onPlayall)="playAll()"
+  (onPlayItem)="playSong($event)">
+  <div class="play-actions">
+    <mat-icon class="mat-24" aria-label="Share">share</mat-icon>
+    <mat-icon class="mat-24" aria-label="like">settings_backup_restore</mat-icon>
+    <mat-icon class="mat-24" aria-label="like">favorite_border</mat-icon>
+  </div>
+  <ng-template let-song>
+    <button class="add-to-playlist-button" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="removeFromPlaylist(song)">
+        <mat-icon>delete_sweep</mat-icon>
+        <span>Remove from playlist</span>
+      </button>
+    </mat-menu>
+  </ng-template>
+</app-playable-list>

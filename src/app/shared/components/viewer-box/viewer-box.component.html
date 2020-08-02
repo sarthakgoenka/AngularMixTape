@@ -1,0 +1,10 @@
+<mat-card class="viewer-box">
+  <mat-card-header class="viewer-header">
+    <mat-toolbar>
+      {{title}}
+    </mat-toolbar>
+  </mat-card-header>
+  <mat-card-content class="viewer-content">
+    <ng-content select=".view-content"></ng-content>
+  </mat-card-content>
+</mat-card>

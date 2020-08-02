@@ -1,0 +1,17 @@
+<h1>
+  UI Elements
+</h1>
+<div class="ui-elements-grid">
+  <mat-card class="ui-element-card" *ngFor="let uiElementsBox of uiElementsBoxes; let i = index;">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image">
+        <mat-icon color="primary">{{ uiElementsBox.icon }}</mat-icon>
+      </div>
+      <mat-card-title>{{uiElementsBox.name}}</mat-card-title>
+      <mat-card-subtitle> {{ uiElementsBox.subtext }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions class="card-actions">
+      <a [routerLink]="[uiElementsBox.url]" mat-button mat-raised-button color="accent">VIEW</a>
+    </mat-card-actions>
+  </mat-card>
+</div>

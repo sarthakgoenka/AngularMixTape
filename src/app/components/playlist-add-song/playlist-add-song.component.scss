@@ -1,0 +1,17 @@
+.title {
+    margin-top: 0;
+}
+.playlists-group {
+    display: flex;
+    flex-direction: column;
+
+    .playlist-item {
+        margin: {
+            top: 5px;
+            bottom: 5px;
+        }
+    }
+}
+.form-submit {
+    margin-top: 20px;
+}

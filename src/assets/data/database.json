@@ -1,0 +1,362 @@
+{
+  "albums" : {
+    "jason-derulo" : {
+      "album-1" : {
+        "id" : "album-1",
+        "image" : "https://images.unsplash.com/photo-1476382929176-f7b329008e17?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=",
+        "name" : "Together on the sand"
+      },
+      "album-2" : {
+        "id" : "album-2",
+        "image" : "https://images.unsplash.com/photo-1489641493513-ba4ee84ccea9?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=",
+        "name" : "Texas lowcast fire"
+      }
+    }
+  },
+  "artists" : {
+    "jason-derulo" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Folk" : true,
+        "Pop" : true,
+        "Rock" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1481886756534-97af88ccb438?dpr=1&auto=format&fit=crop&w=1500&h=844&q=80&cs=tinysrgb&crop=",
+      "name" : "Jason Derulo",
+      "slug" : "jason-derulo"
+    },
+    "keane" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Chill" : true,
+        "Groove" : true,
+        "Jazz" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=",
+      "name" : "Keane",
+      "slug" : "keane"
+    },
+    "kingofthemood" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Jazz" : true,
+        "Rock" : true,
+        "World" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1496233493779-ecc7bb7f9e5f?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=",
+      "name" : "King of the mood",
+      "slug" : "kingofthemood"
+    },
+    "lafiestanegra" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Celtic" : true,
+        "New age" : true,
+        "World" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1474752651386-dc296d69dc90?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=",
+      "name" : "John Legend",
+      "slug" : "lafiestanegra"
+    },
+    "lecrea-gravity" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Heavy" : true,
+        "Metal" : true,
+        "Rock" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1431308305062-f218b6fe520a?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=",
+      "name" : "Lecrea Gravity",
+      "slug" : "lecrea-gravity"
+    },
+    "led-zeppelin" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Heavy" : true,
+        "Metal" : true,
+        "Rock" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1461784121038-f088ca1e7714?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=",
+      "name" : "Led Zeppelin",
+      "slug" : "led-zeppelin"
+    },
+    "mark-ronson" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Electro" : true,
+        "Metal" : true,
+        "Rock" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1476365365201-dce7deb37bf2?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=",
+      "name" : "Mark Ronson",
+      "slug" : "mark-ronson"
+    },
+    "monty-are-i" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Electro" : true,
+        "Metal" : true,
+        "Rock" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1501389040983-5c22cb186487?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=",
+      "name" : "Monty are I",
+      "slug" : "monty-are-i"
+    },
+    "pharel-williams" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Electro" : true,
+        "Metal" : true,
+        "Rock" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?dpr=1&auto=format&fit=crop&w=1500&h=1127&q=80&cs=tinysrgb&crop=",
+      "name" : "Pharel Williams",
+      "slug" : "pharel-williams"
+    },
+    "pink-floyd" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Electro" : true,
+        "Metal" : true,
+        "Rock" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1483393458019-411bc6bd104e?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=",
+      "name" : "Pink floyd",
+      "url_name" : "pink-floyd"
+    },
+    "rolling-stones" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Electro" : true,
+        "Metal" : true,
+        "Rock" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1493936228893-0510232b1cf6?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=",
+      "name" : "Rolling stones",
+      "slug" : "rolling-stones"
+    },
+    "wativ" : {
+      "about" : "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+      "genre" : {
+        "Classic" : true,
+        "Orchestra" : true,
+        "Piano" : true
+      },
+      "image" : "https://images.unsplash.com/photo-1484755560615-a4c64e778a6c?dpr=1&auto=format&fit=crop&w=1500&h=1104&q=80&cs=tinysrgb&crop=",
+      "name" : "Wativ",
+      "slug" : "wativ"
+    }
+  },
+  "playlists" : {
+    "MY8878s7C7fcmD8JGcTa6GM0Vqo2" : {
+      "-KxcWJAERM0j497l5Sc2" : {
+        "image" : "https://firebasestorage.googleapis.com/v0/b/zondimo-c553e.appspot.com/o/playlists%2Fkrista-lance-369582.jpg?alt=media&token=5f9b4403-02c1-4f1a-bfa5-b5b89ead1a18",
+        "name" : "Curious notorious",
+        "owner" : "Joao Garin"
+      },
+      "-KxcWLIAzMi8_8GOZg3y" : {
+        "image" : "https://firebasestorage.googleapis.com/v0/b/zondimo-c553e.appspot.com/o/playlists%2Faaron-blanco-tejedor-325614.jpg?alt=media&token=42b73054-ea3e-4e5b-9899-1663936111e8",
+        "name" : "Madonga",
+        "owner" : "Joao Garin"
+      },
+      "-KxcWOtNkT2HtofdV7v6" : {
+        "image" : "https://firebasestorage.googleapis.com/v0/b/zondimo-c553e.appspot.com/o/playlists%2Fdashboardbanner.jpg?alt=media&token=dff4fa53-d6c5-4c9c-affb-819c5e5fe709",
+        "name" : "Clunky",
+        "owner" : "Joao Garin"
+      },
+      "-KxcWbtsoMHAm_qXqu-r" : {
+        "image" : "https://firebasestorage.googleapis.com/v0/b/zondimo-c553e.appspot.com/o/playlists%2Ffront-hero.jpg?alt=media&token=68109f1a-cb51-4f4b-8cf5-142a71823e90",
+        "name" : "Flunky",
+        "owner" : "Joao Garin"
+      },
+      "-KxcWpw7nLw-neIeY8Hl" : {
+        "image" : "https://firebasestorage.googleapis.com/v0/b/zondimo-c553e.appspot.com/o/playlists%2Ferror-404.jpg?alt=media&token=4764e5c0-1c46-48e2-af69-3f13f2fce0d3",
+        "name" : "Gondanga",
+        "owner" : "Joao Garin"
+      },
+      "-KxcWtQD7yBXDOTVf2B1" : {
+        "image" : "https://firebasestorage.googleapis.com/v0/b/zondimo-c553e.appspot.com/o/playlists%2Ferror-500.jpg?alt=media&token=8824fa95-adcc-42f7-9814-f65bcfb3e5cd",
+        "name" : "slamy and the stoneriders",
+        "owner" : "Joao Garin"
+      },
+      "-KxcX9qv_gagSVucnmZe" : {
+        "image" : "https://firebasestorage.googleapis.com/v0/b/zondimo-c553e.appspot.com/o/playlists%2Fbgprofile.jpg?alt=media&token=2ae44a39-209c-4bea-acfa-628da1e0fa94",
+        "name" : "The best songs ever",
+        "owner" : "Joao Garin"
+      },
+      "-KxcXDaMFtHEsS_2UNQJ" : {
+        "image" : "https://firebasestorage.googleapis.com/v0/b/zondimo-c553e.appspot.com/o/playlists%2Fbg_sky2.jpg?alt=media&token=58013bd9-fa5d-49bc-99f8-809e3ab5e03b",
+        "name" : "Slightnaight",
+        "owner" : "Joao Garin"
+      },
+      "-KxcXYNW1lmo4gYMjfRa" : {
+        "image" : "https://firebasestorage.googleapis.com/v0/b/zondimo-c553e.appspot.com/o/playlists%2Fbg_weather1.png?alt=media&token=003f5aa0-c451-4e2c-a709-5e771e406bec",
+        "name" : "My playlist name is forever",
+        "owner" : "Joao Garin"
+      },
+      "-KxcXhAGUJuy_PGXCt91" : {
+        "image" : "https://firebasestorage.googleapis.com/v0/b/zondimo-c553e.appspot.com/o/playlists%2Fbg_weather2.png?alt=media&token=a23de305-f64a-4cfb-8e04-12303260bd3f",
+        "name" : "Support the locals",
+        "owner" : "Joao Garin"
+      }
+    },
+    "g4xXs09DTJflWV3CVbcoHZJH1Zv1" : {
+      "-KxcE5GN9eQsrGieJJ20" : {
+        "image" : "https://firebasestorage.googleapis.com/v0/b/zondimo-c553e.appspot.com/o/playlists%2Frawpixel-com-250087.jpg?alt=media&token=c36f91ae-0d15-446a-bd2e-685e7035be5f",
+        "name" : "Songs for a working day",
+        "owner" : "João Garin epiqo"
+      }
+    }
+  },
+  "songs" : {
+    "-KxcE5GN9eQsrGieJJ20" : {
+      "-KxcZ3Kp_hkxKNUPd2oV" : {
+        "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+        "name" : "The_Remixin_Blues",
+        "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+      }
+    },
+    "-KxcWJAERM0j497l5Sc2" : {
+      "-Ky6pMwzOPLWg1zLoMfz" : {
+        "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+        "name" : "The_Remixin_Blues",
+        "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+      }
+    },
+    "-KxcWOtNkT2HtofdV7v6" : {
+      "-Ky7vbcc5y8JYkswEIem" : {
+        "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+        "name" : "The_Remixin_Blues",
+        "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+      },
+      "-Ky7viJaGcyoXd-AaiJf" : {
+        "image" : "https://images.unsplash.com/photo-1480365192324-83232188157e?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+        "name" : "Dont deny it",
+        "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+      }
+    },
+    "-KxcWbtsoMHAm_qXqu-r" : {
+      "-Ky6pWKZ8JDmEl_e3Uwo" : {
+        "image" : "https://images.unsplash.com/photo-1457282367193-e3b79e38f207?dpr=1&auto=compress,format&fit=crop&w=2708&h=&q=80&cs=tinysrgb&crop=",
+        "name" : "I miss you",
+        "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+      }
+    },
+    "-KxcWpw7nLw-neIeY8Hl" : {
+      "-KxcYvUMw-5aMUyTvoDo" : {
+        "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+        "name" : "The_Remixin_Blues",
+        "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+      }
+    },
+    "album-1" : [ {
+      "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "The_Remixin_Blues",
+      "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1457282367193-e3b79e38f207?dpr=1&auto=compress,format&fit=crop&w=2708&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "I miss you",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1480365192324-83232188157e?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "Dont deny it",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "The_Remixin_Blues",
+      "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1457282367193-e3b79e38f207?dpr=1&auto=compress,format&fit=crop&w=2708&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "I miss you",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1480365192324-83232188157e?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "Dont deny it",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "The_Remixin_Blues",
+      "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1457282367193-e3b79e38f207?dpr=1&auto=compress,format&fit=crop&w=2708&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "I miss you",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1480365192324-83232188157e?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "Dont deny it",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    } ],
+    "album-2" : [ {
+      "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "The_Remixin_Blues",
+      "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1457282367193-e3b79e38f207?dpr=1&auto=compress,format&fit=crop&w=2708&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "I miss you",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1480365192324-83232188157e?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "Dont deny it",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "The_Remixin_Blues",
+      "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1457282367193-e3b79e38f207?dpr=1&auto=compress,format&fit=crop&w=2708&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "I miss you",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1480365192324-83232188157e?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "Dont deny it",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "The_Remixin_Blues",
+      "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1457282367193-e3b79e38f207?dpr=1&auto=compress,format&fit=crop&w=2708&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "I miss you",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    }, {
+      "image" : "https://images.unsplash.com/photo-1480365192324-83232188157e?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+      "name" : "Dont deny it",
+      "url" : "http://ccmixter.org/content/snowflake/snowflake_-_I_Miss_You.mp3"
+    } ],
+    "undefined" : {
+      "-Ky6aZXfUG_wqZ9fbTCe" : {
+        "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+        "name" : "The_Remixin_Blues",
+        "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+      },
+      "-Ky6p4mKjfwNKVqXmKPJ" : {
+        "image" : "https://images.unsplash.com/photo-1440549770084-4b381ce9d988?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=",
+        "name" : "The_Remixin_Blues",
+        "url" : "http://ccmixter.org/content/admiralbob77/admiralbob77_-_The_Remixin_Blues_2.mp3"
+      }
+    }
+  },
+  "users" : {
+    "MY8878s7C7fcmD8JGcTa6GM0Vqo2" : {
+      "displayName" : "Joao Garin",
+      "email" : "joao.garin@gmail.com",
+      "emailVerified" : true,
+      "photoURL" : "https://lh5.googleusercontent.com/-HFKQpivBmHY/AAAAAAAAAAI/AAAAAAAAAcE/puFzwllqQBU/photo.jpg",
+      "uid" : "MY8878s7C7fcmD8JGcTa6GM0Vqo2"
+    },
+    "XwdKppbkNiSDWDhKpFCuRx2sYqv2" : {
+      "displayName" : "André Santos",
+      "email" : "andremsantos@gmail.com",
+      "emailVerified" : true,
+      "photoURL" : "https://lh4.googleusercontent.com/-XPqBptEYAco/AAAAAAAAAAI/AAAAAAAAAOE/EVgCwu1dHlA/photo.jpg",
+      "uid" : "XwdKppbkNiSDWDhKpFCuRx2sYqv2"
+    },
+    "g4xXs09DTJflWV3CVbcoHZJH1Zv1" : {
+      "displayName" : "João Garin",
+      "email" : "joao.garin@epiqo.com",
+      "emailVerified" : true,
+      "photoURL" : "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg",
+      "uid" : "g4xXs09DTJflWV3CVbcoHZJH1Zv1"
+    }
+  }
+}

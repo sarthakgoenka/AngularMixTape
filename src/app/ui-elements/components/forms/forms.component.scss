@@ -1,0 +1,68 @@
+@import "./../../../../styles/settings/breakpoints.scss";
+
+:host {
+    &   .mat-tab-body-wrapper {
+        padding: 20px;
+    }
+    .forms-wrapper {
+        @include breakpoint($narrow-devices) {
+            display: flex;
+            align-items: top;
+            justify-content: space-between;
+            .forms-column {
+                width: 49%;
+            }
+        }
+    }
+}
+
+.example-h2 {
+    margin: 10px;
+}
+
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.example-margin {
+    margin: 0 10px;
+}
+
+.example-radio-group {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.example-radio-button {
+    margin: 5px;
+}
+
+.example-selected-value {
+    margin: 15px 0;
+}
+
+.example-h2 {
+    margin: 10px;
+}
+
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.example-margin {
+    margin: 10px;
+}
+
+.mat-slider-horizontal {
+    width: 300px;
+}
+
+.mat-slider-vertical {
+    height: 300px;
+}

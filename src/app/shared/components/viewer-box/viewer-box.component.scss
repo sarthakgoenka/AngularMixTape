@@ -1,0 +1,9 @@
+.viewer-box {
+    padding: 0;
+    &   .mat-card-header-text {
+        margin: 0;
+    }
+    .viewer-content {
+        padding: 20px;
+    }
+}

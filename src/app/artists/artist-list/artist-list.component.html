@@ -1,0 +1,17 @@
+<div class="artist-list" infinite-scroll [infiniteScrollContainer]="'.mat-sidenav-content'" [infiniteScrollDistance]="2" [immediateCheck]="true" (scrolled)="incrementListSize()">
+  <div class="artist-item" *ngFor="let artist of artists | async;">
+    <app-card [image]="artist.image" [imageAlt]="artist.name" [link]="['/artists', artist.slug]" [linkText]="'See Artist'">
+      <div class="title">
+        <a [routerLink]="['/artists', artist.slug]" class="artist-name-link">{{artist.name}}</a>
+      </div>
+      <div class="subtitle">
+        <div>
+          <mat-chip-list>
+            <mat-chip>Punk rock</mat-chip>
+            <mat-chip>Blues</mat-chip>
+          </mat-chip-list>
+        </div>
+      </div>
+    </app-card>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+@import "./../../../../styles/settings/breakpoints.scss";
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.ui-elements-grid {
+    display: flex;
+    flex-flow: column;
+    @include breakpoint($narrow-devices) {
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+}
+
+.ui-element-card {
+    margin-top: 15px;
+    flex: 1;
+    @include breakpoint($narrow-devices) {
+        margin-top: 40px;
+        flex: inherit;
+        width: 28%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        margin-right: 2%;
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+}
+
+.mat-card>.mat-card-actions:last-child {
+    padding: 10px;
+}
+
+.header-image {
+    mat-icon {
+        height: 40px;
+        width: 40px;
+        font-size: 35px;
+    }
+}

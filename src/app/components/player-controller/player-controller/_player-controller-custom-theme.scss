@@ -1,0 +1,6 @@
+@mixin player-controller-theme-custom($theme) {
+    $background: map-get($theme, "background");
+    .player-controller {
+        background-color: mat-color($background, 'background');
+    }
+}

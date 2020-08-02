@@ -1,0 +1,40 @@
+<div class="controller-wrapper">
+    <div class="player-controller" [ngClass]="{'collapsed': collapsed}">
+        <button class="expand-button" (click)="toggleExpandPlayer()">
+            <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <div class="player-current-song-info" *ngIf="player | async; let player">
+            <div *ngIf="player.currentSong">
+                <div class="song-image">
+                    <img [src]="player.currentSong.image" [alt]="player.currentSong.name" [title]="player.currentSong.name" />
+                </div>
+                <div class="song-name">{{player.currentSong.name}}</div>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button (click)="playerPrev()">
+                <mat-icon color="accent" class="mat-24" aria-label="Previous">fast_rewind</mat-icon>
+            </button>
+            <button *ngIf="playing" class="player-button" (click)="playerPause()" mat-mini-fab color="primary">
+                <mat-icon class="mat-24" aria-label="Pause">pause</mat-icon>
+            </button>
+            <button *ngIf="!playing" class="player-button" (click)="playerResume()" mat-mini-fab color="primary">
+                <mat-icon class="mat-24" aria-label="Resume / Play">play_arrow</mat-icon>
+            </button>
+            <button (click)="playerNext()">
+                <mat-icon color="accent" class="mat-24" aria-label="Next">fast_forward</mat-icon>
+            </button>
+        </div>
+        <div class="player-secondary-controls">
+            <div class="show-queue">
+                <a [routerLink]="'/queue'">
+                    <mat-icon color="accent" class="mat-24" aria-label="Queue list">playlist_play</mat-icon>
+                </a>
+            </div>
+            <div class="player-volume">
+                <mat-icon color="accent" class="mat-24" aria-label="Volume">volume_up</mat-icon>
+                <mat-slider color="primary" min="0" max="1" step="0.1" [value]="volume" (change)="updateVolume($event)"></mat-slider>
+            </div>
+        </div>
+    </div>
+</div>

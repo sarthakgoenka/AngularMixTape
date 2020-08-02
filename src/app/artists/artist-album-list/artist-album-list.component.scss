@@ -1,0 +1,9 @@
+@import "./../../../styles/settings/breakpoints.scss";
+@import "./../../../styles/settings/colors.scss";
+.albums {
+    margin-top: 2rem;
+}
+
+.empty {
+    color: $gray--light;
+}

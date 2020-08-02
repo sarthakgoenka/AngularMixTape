@@ -1,0 +1,9 @@
+<app-viewer-box [title]="'Icons'">
+  <div class="view-content">
+    <div class="icons">
+      <div class="icon" *ngFor="let icon of icons; let i = index;">
+        <mat-icon color="primary">{{icon}}</mat-icon>
+      </div>
+    </div>
+  </div>
+</app-viewer-box>

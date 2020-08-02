@@ -1,0 +1,13 @@
+@mixin sidebar-theme-custom($theme) {
+    $primary: map-get($theme, "primary");
+    $accent: map-get($theme, "accent");
+    .mat-icon {
+        color: mat-color($accent);
+    }
+    .active {
+        border-right: 3px solid mat-color($primary);
+        .mat-icon {
+            color: mat-color($primary);
+        }
+    }
+}

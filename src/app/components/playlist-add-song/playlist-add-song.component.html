@@ -1,0 +1,12 @@
+<h2 class="title">
+  Select playlist
+</h2>
+<form [formGroup]="addSongToPlaylistForm" (ngSubmit)="onSubmit(addSongToPlaylistForm.value)">
+  <mat-radio-group class="playlists-group" formControlName="selectedItem">
+    <mat-radio-button class="playlist-item" *ngFor="let playlist of playlists | async; let i=index" [value]="playlist.id">
+      {{playlist.name}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <button class="form-submit" mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+

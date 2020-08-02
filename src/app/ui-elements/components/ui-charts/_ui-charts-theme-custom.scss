@@ -1,0 +1,50 @@
+@import "./../../../../styles/settings/colors.scss";
+@mixin ui-charts-theme-custom($theme) {
+    $primary: map-get($theme, "primary");
+    $accent: map-get($theme, "accent");
+    $warn: map-get($theme, "warn");
+    g[ng-reflect-color="accent"] {
+        color: mat-color($accent);
+        & path {
+            stroke: mat-color($accent);
+        }
+    }
+    g[ng-reflect-color="primary"] {
+        color: mat-color($primary);
+        & path {
+            stroke: mat-color($primary);
+        }
+    }
+    g[ng-reflect-color="warn"] {
+        color: mat-color($warn);
+        & path {
+            stroke: mat-color($warn);
+        }
+    }
+    g[ng-reflect-fill="accent"] {
+        fill: mat-color($accent);
+    }
+    g[ng-reflect-fill="primary"] {
+        fill: mat-color($primary);
+    }
+    g[ng-reflect-fill="warn"] {
+        fill: mat-color($warn);
+    }
+
+    // Legends
+    ngx-charts-legend-entry[ng-reflect-color="accent"] {
+        .legend-label-color {
+            background-color: mat-color($accent);
+        }
+    }
+    ngx-charts-legend-entry[ng-reflect-color="primary"] {
+        .legend-label-color {
+            background-color: mat-color($primary);
+        }
+    }
+    ngx-charts-legend-entry[ng-reflect-color="warn"] {
+        .legend-label-color {
+            background-color: mat-color($warn);
+        }
+    }
+}

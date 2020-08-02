@@ -1,0 +1,8 @@
+<mat-card class="card">
+  <div class="card-image">
+    <img *ngIf="image" mat-card-image [src]="image" [alt]="name">
+  </div>
+  <mat-card-content class="card-content">
+    <h4 class="title"><mat-icon color="primary">view_list</mat-icon>{{name}}</h4>
+  </mat-card-content>
+</mat-card>

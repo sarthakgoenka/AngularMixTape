@@ -1,0 +1,122 @@
+<div>
+  <mat-card>
+    <mat-card-header>
+      <h4>
+        Income by country
+      </h4>
+      <span class="example-spacer"></span>
+      <mat-form-field>
+        <input matInput (dateChange)="dateChange()" [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+      </mat-form-field>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="chart-wrapper">
+        <ngx-charts-pie-grid [scheme]="colorScheme" [results]="chartData">
+        </ngx-charts-pie-grid>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+<br/>
+<div class="icon-boxes">
+  <div class="icon-boxes-item">
+    <app-icon-box [icon]="'file_download'" [color]="'primary'" [number]="20189" [title]="'Downloads'">
+      <div class="sub-content">
+        <button mat-button color="primary">Learn more</button>
+      </div>
+    </app-icon-box>
+  </div>
+  <div class="icon-boxes-item">
+    <app-icon-box [icon]="'playlist_add_check'" [color]="'accent'" [number]="20189" [title]="'Downloads'">
+      <div class="sub-content">
+        <button mat-button color="accent">Learn more</button>
+      </div>
+    </app-icon-box>
+  </div>
+  <div class="icon-boxes-item">
+    <app-icon-box [icon]="'album'" [color]="'warn'" [number]="20189" [title]="'Downloads'">
+      <div class="sub-content">
+        <button mat-button color="warn">Learn more</button>
+      </div>
+    </app-icon-box>
+  </div>
+  <div class="icon-boxes-item">
+    <app-icon-box [icon]="'library_music'" [color]="'primary'" [number]="20189" [title]="'Downloads'">
+      <div class="sub-content">
+        <button mat-button color="primary">Learn more</button>
+      </div>
+    </app-icon-box>
+  </div>
+</div>
+<br>
+<div class="charts-wrapper">
+  <div class="charts-column">
+    <app-weather-box [image]="weatherBoxImage" [degree]="'33º'" [hotness]="'sunny'" [city]="'Lisbon, Portugal'"></app-weather-box>
+    <br/>
+    <div class="chart-cards-wrapper">
+      <ngx-charts-number-card class="cards-stack" [innerPadding]="20" [cardColor]="cardsColor" [scheme]="colorScheme" [results]="chartData">
+      </ngx-charts-number-card>
+    </div>
+    <br/>
+    <mat-toolbar class="list-toolbar">
+      <span>
+        <mat-icon color="accent">list</mat-icon> List items
+      </span>
+    </mat-toolbar>
+    <mat-card>
+      <mat-card-content>
+        <mat-list>
+          <h3 mat-subheader>Folders</h3>
+          <mat-list-item *ngFor="let folder of folders">
+            <mat-icon mat-list-icon>folder</mat-icon>
+            <h4 mat-line>{{folder.name}}</h4>
+            <p mat-line> {{folder.updated | date}} </p>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <h3 mat-subheader>Notes</h3>
+          <mat-list-item *ngFor="let note of notes">
+            <mat-icon mat-list-icon>note</mat-icon>
+            <h4 mat-line>{{note.name}}</h4>
+            <p mat-line> {{note.updated | date}} </p>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="charts-column">
+    <mat-toolbar>
+      Icon list
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon">more_vert</mat-icon>
+      <mat-icon class="example-icon">delete</mat-icon>
+    </mat-toolbar>
+    <mat-card>
+      <mat-card-content>
+        <app-icons-buttons [icons]="icons" [large]="true">
+        </app-icons-buttons>
+      </mat-card-content>
+    </mat-card>
+    <br/>
+    <app-playable-list [songs]="playlistSongs" [image]="playlistImage" [title]="playlistTitle" [info]="playlistInfo" (onPlayItem)="playSong($event)"
+      (onPlayall)="playSongs()">
+    </app-playable-list>
+    <br/>
+    <mat-toolbar class="chart-toolbar">
+      <span>
+        <mat-icon color="accent">show_chart</mat-icon> Most popular data
+      </span>
+    </mat-toolbar>
+    <mat-card>
+      <mat-card-content>
+        <div class="chart-wrapper">
+          <ngx-charts-line-chart class="line-chart-popularity" [curve]="curve()" [scheme]="lineColorScheme" [results]="single">
+          </ngx-charts-line-chart>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <br/>
+    <app-user-box [image]="userBoxImage" [username]="'Alex Grindanough'"></app-user-box>
+  </div>
+</div>

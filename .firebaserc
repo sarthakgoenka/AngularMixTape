@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "sangeet-87aa6": {
+      "hosting": {
+        "MusicApp": [
+          "sangeet-87aa6"
+        ]
+      }
+    }
+  }
+}

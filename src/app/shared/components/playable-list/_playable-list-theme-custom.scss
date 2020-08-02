@@ -1,0 +1,19 @@
+@import "./../../../../styles/settings/colors.scss";
+@mixin playable-list-theme-custom($theme) {
+    $primary: map-get($theme, "primary");
+    $background: map-get($theme, "background");
+    .song-list {
+        .song-item {
+            .mat-icon {
+                color: $gray--light;
+            }
+            &:hover {
+                .play-song {
+                    .mat-icon {
+                        color: mat-color($primary);
+                    }
+                }
+            }
+        }
+    }
+}

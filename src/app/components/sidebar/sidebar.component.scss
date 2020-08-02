@@ -1,0 +1,12 @@
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: {
+        top: 2rem;
+        bottom: 2rem;
+    }
+    mat-icon {
+        padding: 15px 25px;
+    }
+}
