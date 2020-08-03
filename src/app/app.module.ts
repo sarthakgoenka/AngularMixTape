@@ -12,7 +12,16 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatButtonModule} from "@angular/material/button";
-
+import {MatSliderModule} from "@angular/material/slider";
+import {StoreModule} from "@ngrx/store";
+import {initialState, reducers} from "./store/index";
+import {AngularFireModule} from "@angular/fire";
+import {environment, staticData} from "../environments/environment";
+import {AngularFireDatabaseModule} from "@angular/fire/database";
+import {AngularFireAuthModule} from "@angular/fire/auth";
+import {UserModule} from "./user/user.module";
+import {EffectsModule} from "@ngrx/effects";
+import {AuthEffects} from "./store/effects/firebase/user.effects";
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +37,15 @@ import {MatButtonModule} from "@angular/material/button";
     MatToolbarModule,
     MatIconModule,
     MatSlideToggleModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSliderModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule, // imports firebase/database, only needed for database features
+    AngularFireAuthModule,
+    EffectsModule.forRoot([AuthEffects
+    ]),
+    StoreModule.forRoot(reducers, <any>initialState),
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

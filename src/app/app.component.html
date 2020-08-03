@@ -1,13 +1,20 @@
 <div class="wrapper" [ngClass]="{ 'sangeet-dark-theme': darkTheme }">
-  <app-header  (onToggleTheme)="toggleTheme()"></app-header>
+  <app-header [title]="title"
+              [user]="user | async"
+              (onToggleSidenav)="toggleSidenav()"
+              (onLogout)="logout()"
+              (oncreatePlaylist)="createPlaylist()"
+              (onToggleTheme)="toggleTheme()"
+  ></app-header>
   <mat-sidenav-container class="main-app"
-    [ngClass]="{ 'player-collapsed': true}">
-    <mat-sidenav #sidenav class="sidenav"  mode="side" opened>
+    [ngClass]="{ 'player-collapsed': playerCollapsed }">
+    <mat-sidenav #sidenav [mode]="navMode" class="sidenav">
       <app-sidebar></app-sidebar>
     </mat-sidenav>
     <div class="main-content">
       <router-outlet></router-outlet>
     </div>
-    <app-player-controller></app-player-controller>
+    <app-player-controller *ngIf="!singlePage"
+                           (onTogglePlayer)="playerCollapseToggle($event)"></app-player-controller>
   </mat-sidenav-container>
 </div>

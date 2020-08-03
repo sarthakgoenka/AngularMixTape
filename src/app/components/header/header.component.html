@@ -1,10 +1,10 @@
 <mat-toolbar class="header-bar">
-  <button mat-button class="toggleSidenav">
+  <button mat-button class="toggleSidenav" (click)="toggleSidenav()">
     <mat-icon color="primary">menu</mat-icon>
   </button>
   <a class="main-logo" [routerLink]="'/'">
-    <mat-icon color="primary">adjust</mat-icon>
-    <span class="app-title">SANGEET</span>
+    <mat-icon color="primary">music_note</mat-icon>
+    <span class="app-title">{{title}}</span>
   </a>
   <span class="spacer"></span>
   <mat-slide-toggle
@@ -22,7 +22,7 @@
     <mat-icon class="action_icon">person</mat-icon>Login
   </button>
   <a class="user_image">
-    <img >
+<!--    <img [src]="user.user_image" [alt]="user.username">-->
   </a>
   <button mat-button class="action-button">
     <mat-icon class="action_icon" color="primary">exit_to_app</mat-icon>

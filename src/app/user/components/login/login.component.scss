@@ -1,0 +1,51 @@
+@import "./../../../../styles/settings/breakpoints.scss";
+@import "./../../../../styles/settings/colors.scss";
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-title {
+    margin-left: 10px;
+}
+
+.subtext {
+    margin-bottom: 2rem;
+    @include breakpoint($narrow-devices) {
+        max-width: 70%;
+        text-align: center;
+        line-height: 1.7rem;
+        font-size: 1.2rem;
+    }
+}
+
+.main-logo {
+    text-decoration: none;
+    color: currentColor;
+    display: none;
+    @include breakpoint($narrow-devices) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+}
+
+.form-container {
+    @include breakpoint($narrow-devices) {
+        margin-top: 50px;
+    }
+}
+
+.login-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint($narrow-devices) {
+        margin-top: 50px;
+        padding: 4rem;
+    }
+}
