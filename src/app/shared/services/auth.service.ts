@@ -1,28 +1,24 @@
+import { Router } from '@angular/router';
+import { UserLoginAction, UserLogoutAction, UserAuthAction, UserLoginSuccessAction } from './../../store/actions/user.action';
+import { USER_ACTION_TYPES } from './../../store/actions/user.action';
+
 import { Injectable } from '@angular/core';
+import * as firebase from 'firebase/app';
+import { Store } from '@ngrx/store';
+
+import { State } from './../../store/index';
 import {AngularFireAuth} from "@angular/fire/auth";
 import {AngularFireDatabase} from "@angular/fire/database";
-import {Store} from "@ngrx/store";
-import {State} from "../../store/index";
-import {Router} from "@angular/router";
-import {
-  UserAuthAction,
-  UserLoginAction,
-  UserLoginSuccessAction,
-  UserLogoutAction
-} from "../../store/actions/user.action";
-import * as firebase from "firebase";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AuthService {
+
   private _user: firebase.User;
 
   constructor(public afAuth: AngularFireAuth,
-              private db: AngularFireDatabase,
-              public store: Store<State>,
-              private router: Router) {
-
+    private db: AngularFireDatabase,
+    public store: Store<State>,
+    private router: Router) {
     afAuth.authState.subscribe((user) => {
       this.setUser(user);
     });

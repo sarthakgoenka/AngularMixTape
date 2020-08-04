@@ -1,0 +1,12 @@
+<mat-card>
+  <div class="weather-image">
+    <img mat-card-image [src]="image" alt="Photo of a Shiba Inu">
+    <h3 class="weather-value">
+      <span>{{ degree }}</span> {{ hotness }}
+      <br/> {{ city }}
+    </h3>
+  </div>
+  <mat-card-content class="weathers-content">
+    <app-icons-buttons [icons]="icons"></app-icons-buttons>
+  </mat-card-content>
+</mat-card>

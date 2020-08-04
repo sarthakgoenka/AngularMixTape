@@ -1,0 +1,12 @@
+<mat-card class="icon-box">
+  <mat-card-content>
+    <mat-icon [color]="color">{{icon}}</mat-icon>
+    <h3>
+      {{number}}
+    </h3>
+    <h4>
+      {{title}}
+    </h4>
+  </mat-card-content>
+  <ng-content select=".sub-content"></ng-content>
+</mat-card>

@@ -1,0 +1,30 @@
+.grid-icons {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    &.large {
+        .grid-icon {
+            height: 100px;
+            mat-icon {
+                font-size: 40px;
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+    .grid-icon {
+        width: 25%;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        &:last-child {
+            border: none;
+        }
+        mat-icon {
+            margin: auto;
+        }
+    }
+}

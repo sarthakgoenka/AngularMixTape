@@ -1,21 +1,22 @@
-import { Actions, USER_ACTION_TYPES } from './../actions/user.action';
-
-import { User } from './../models/user.model';
+import {User} from "../models/user.model";
+import {Action} from "@ngrx/store";
+import {Actions, USER_ACTION_TYPES} from "../actions/user.action";
 
 export const userInitialState:User = {
-  authenticated: false,
+  authenticated:false,
   username: '',
   user_image: '',
-  uid: '',
-};
+  uid: ''
+}
 
 export function userStoreReducer(state: User = userInitialState, action: Actions) {
   switch (action.type) {
     case USER_ACTION_TYPES.AUTH:
-      return {
-        ...userInitialState,
-        ...action.payload
-      }
+      return Object.assign(state,
+        {
+          authenticated: true, username: action.payload.username,
+          user_image: action.payload.user_image, uid: action.payload.uid
+        });
 
     case USER_ACTION_TYPES.UNAUTH:
       return Object.assign(state, { authenticated: false, username: '', user_image: '' });

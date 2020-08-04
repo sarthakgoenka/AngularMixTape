@@ -22,12 +22,16 @@ import {AngularFireAuthModule} from "@angular/fire/auth";
 import {UserModule} from "./user/user.module";
 import {EffectsModule} from "@ngrx/effects";
 import {AuthEffects} from "./store/effects/firebase/user.effects";
+import {ArtistsModule} from "./artists/artists.module";
+import {SharedModule} from "./shared/shared.module";
+import { PlaylistAddSongComponent } from './components/playlist-add-song/playlist-add-song.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    PlayerControllerComponent
+    PlaylistAddSongComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,11 @@ import {AuthEffects} from "./store/effects/firebase/user.effects";
     EffectsModule.forRoot([AuthEffects
     ]),
     StoreModule.forRoot(reducers, <any>initialState),
-    UserModule
+    UserModule,
+    ArtistsModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

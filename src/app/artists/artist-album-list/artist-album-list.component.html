@@ -1,0 +1,8 @@
+<div *ngIf="albums.length > 0; else noalbums" class="albums">
+  <div class="artist-album" *ngFor="let album of albums;">
+    <app-artists-album-playable [artist]="artist" [album]="album" (onAddSong)="addSongToPlaylist($event)"></app-artists-album-playable>
+  </div>
+</div>
+<ng-template #noalbums>
+  <div class="empty">Artist has no albums.</div>
+</ng-template>

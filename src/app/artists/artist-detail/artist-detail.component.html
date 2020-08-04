@@ -1,0 +1,96 @@
+<div class="artist" *ngIf="artist">
+  <div class="artist-banner">
+    <div class="arist-banner-name">
+      <h1>{{artist.name}}</h1>
+      <div class="about">{{artist.about}}</div>
+      <a [color]="'primary'" mat-button mat-raised-button [routerLink]="'/'">
+        <mat-icon>play_circle_outline</mat-icon> Play songs</a>
+    </div>
+    <img [src]="artist.image" [alt]="artist.name" [title]="artist.name" />
+  </div>
+  <div class="artist-content">
+    <div class="albums">
+      <h3>
+        <mat-icon color="accent">album</mat-icon> {{artist.name}} Albums</h3>
+      <app-artist-album-list [artist]="artist" [albums]="albums | async" (onAddSong)="addSongToPlaylist($event)"></app-artist-album-list>
+    </div>
+    <div class="side-blocks">
+      <div class="block">
+        <mat-card>
+          <mat-card-header>
+            <h3 class="title">
+              <mat-icon color="primary">people</mat-icon> Following this artist
+            </h3>
+          </mat-card-header>
+          <mat-card-content>
+            <ul class="list-followers">
+              <li>
+                <img src="assets/images/user.png" alt="" />
+              </li>
+              <li>
+                <img src="assets/images/team1.jpg" alt="" />
+              </li>
+              <li>
+                <img src="assets/images/team2.jpg" alt="" />
+              </li>
+              <li>
+                <img src="assets/images/team3.jpg" alt="" />
+              </li>
+              <li>
+                <img src="assets/images/team4.jpg" alt="" />
+              </li>
+              <li>
+                <img src="assets/images/team5.jpg" alt="" />
+              </li>
+              <li>
+                <img src="assets/images/team6.jpg" alt="" />
+              </li>
+              <li>
+                <img src="assets/images/team3.jpg" alt="" />
+              </li>
+              <li>
+                <img src="assets/images/team4.jpg" alt="" />
+              </li>
+              <li>
+                <img src="assets/images/team5.jpg" alt="" />
+              </li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="block">
+        <mat-card>
+          <mat-card-header>
+            <h3 class="title">
+              <mat-icon color="primary">attach_money</mat-icon> Sales / Country
+            </h3>
+          </mat-card-header>
+          <mat-card-content>
+            <app-artist-country-fan-chart></app-artist-country-fan-chart>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="block">
+        <mat-card>
+          <mat-card-header>
+            <h3 class="title">
+              <mat-icon color="primary">done_all</mat-icon> Categories
+            </h3>
+          </mat-card-header>
+          <mat-card-content class="categories-list">
+            <mat-chip-list>
+              <mat-chip>Jazz</mat-chip>
+              <mat-chip>House</mat-chip>
+              <mat-chip>Country</mat-chip>
+              <mat-chip>Reggae</mat-chip>
+              <mat-chip>House / Jazz</mat-chip>
+              <mat-chip>Hip Hop</mat-chip>
+              <mat-chip>Cascaton</mat-chip>
+              <mat-chip>Reggaton</mat-chip>
+            </mat-chip-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
