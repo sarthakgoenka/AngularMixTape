@@ -27,7 +27,7 @@ export class PlayerControllerComponent implements OnInit {
   ngOnInit() {
     this.player = this.store.select('player');
    this.store.select('player').subscribe(dad=>{
-     console.log(dad)
+     // console.log(dad)
    })
 
     this.updateSidenavForWindow();

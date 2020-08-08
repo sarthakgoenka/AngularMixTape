@@ -36,6 +36,7 @@ export class PlayableListComponent implements OnInit {
    * Play a single item.
    */
   playItem(song: Song) {
+    console.log(song)
     this.onPlayItem.emit(song);
   }
 

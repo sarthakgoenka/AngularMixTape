@@ -1,11 +1,11 @@
 import { PlaylistService } from './../../shared/services/playlist/playlist.service';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Observable } from 'rxjs';
 import { Playlist } from './../../store/models/playlist.model';
 import { State } from './../../store/index';
 import { Store } from '@ngrx/store';
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-playlist-add-song',

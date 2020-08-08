@@ -11,24 +11,26 @@ export function playerStoreReducer(state: Player = playerInitialState, action: A
     switch (action.type) {
         case PLAYER_ACTION_TYPES.PLAYER_ADD_SONG:
             const songsNew = [state.songs, action.payload.song];
-            return Object.assign(state, { songs: songsNew });
+          console.log(songsNew)
+          return {...state, songs: songsNew }
+            // return Object.assign(state, { songs: songsNew });
 
         case PLAYER_ACTION_TYPES.PLAYER_ADD_SONGS:
             const songs = [...state.songs, ...action.payload.songs];
-            return Object.assign(state, { songs: songs });
+            return {...state, songs: songs };
 
         case PLAYER_ACTION_TYPES.PLAYER_PLAY_SONG:
-            return Object.assign(state, { currentSong: action.payload.song });
+            return {...state, currentSong: action.payload.song };
 
         case PLAYER_ACTION_TYPES.PLAYER_REMOVE_SONG:
             const songsUpdated = state.songs.filter(song => {
                 return song != action.payload.song;
             });
-            return Object.assign(state, { songs: songsUpdated });
+            return {...state,  songs: songsUpdated };
 
         case PLAYER_ACTION_TYPES.PLAYER_REMOVE_ALL_SONGS:
             const songsCleared = [];
-            return Object.assign(state, { songs: songsCleared });
+            return {...state, songs: songsCleared };
 
         default:
             return state;

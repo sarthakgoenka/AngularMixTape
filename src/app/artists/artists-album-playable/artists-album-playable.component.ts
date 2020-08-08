@@ -39,6 +39,8 @@ export class ArtistsAlbumPlayableComponent implements OnInit {
       map(a => {
       return a[this.album.id];
     })).subscribe(s => {
+      // console.log(s)
+
       this.songs = s;
     });
 
@@ -49,6 +51,7 @@ export class ArtistsAlbumPlayableComponent implements OnInit {
    * Handler to play a song.
    */
   playSong(song: Song) {
+    console.log(song);
     this.albumService.playSong(song);
   }
 
@@ -64,5 +67,6 @@ export class ArtistsAlbumPlayableComponent implements OnInit {
    */
   addSongToPlaylist(song: Song) {
     this.onAddSong.emit(song);
+    console.log(song)
   }
 }
