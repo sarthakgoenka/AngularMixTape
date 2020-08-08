@@ -1,0 +1,28 @@
+<div *ngIf="(playlists$ | async)?.length; else elseBlock">
+  <h1>
+    My playlists
+  </h1>
+  <div class="playlist-list">
+    <div class="playlist-item" *ngFor="let playlist of playlists$ | async;">
+      <app-card [image]="playlist.image" [imageAlt]="playlist.name" [link]="['/playlists/detail', playlist.id]" [linkText]="'See Playlist'">
+        <div class="title">
+          <a [routerLink]="['/playlists/detail', playlist.id]" class="playlist-name-link">{{playlist.name}}</a>
+        </div>
+        <div class="subtitle">
+          <div>
+            Playlist by {{ playlist.owner }}
+          </div>
+        </div>
+      </app-card>
+    </div>
+  </div>
+</div>
+<ng-template #elseBlock>
+  <div class="empty">
+    <mat-icon class="empty-icon" color="primary">playlist_add</mat-icon>
+    <h3 class="empty-text">
+      Your have no playlists. Login and Start browing artists and albums and add them to your playlist.
+    </h3>
+    <a mat-button mat-raised-button [routerLink]="'/artists'" color="primary">Browse artists</a>
+  </div>
+</ng-template>

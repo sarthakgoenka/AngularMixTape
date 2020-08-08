@@ -1,0 +1,60 @@
+@import "./../../../styles/settings/colors.scss";
+@import "./../../../styles/settings/breakpoints.scss";
+
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-list {
+    display: flex;
+    flex-flow: column;
+    @include breakpoint($narrow-devices) {
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+}
+
+.playlist-item {
+    margin-top: 15px;
+    flex: 1;
+    @include breakpoint($narrow-devices) {
+        margin-top: 40px;
+        flex: inherit;
+        width: 32%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        margin-right: 2%;
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+}
+
+.playlist-name-link {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.empty {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include breakpoint($narrow-devices) {
+        margin-top: 15vh;
+    }
+}
+
+.empty-icon {
+    font-size: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.empty-text {
+    @include breakpoint($narrow-devices) {
+        max-width: 40%;
+    }
+    text-align: center;
+    line-height: 2rem;
+}

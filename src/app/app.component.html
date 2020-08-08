@@ -1,6 +1,7 @@
+
+
 <div class="wrapper" [ngClass]="{ 'sangeet-dark-theme': darkTheme }">
   <app-header [title]="title"
-              [user]="user | async"
               (onToggleSidenav)="toggleSidenav()"
               (onLogout)="logout()"
               (oncreatePlaylist)="createPlaylist()"

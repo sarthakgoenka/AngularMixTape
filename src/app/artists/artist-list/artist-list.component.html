@@ -1,4 +1,4 @@
-<div class="artist-list" infinite-scroll [infiniteScrollContainer]="'.mat-sidenav-content'" [infiniteScrollDistance]="2" [immediateCheck]="true" (scrolled)="incrementListSize()">
+<div class="artist-list" infinite-scroll [infiniteScrollDistance]="2" [immediateCheck]="true" (scrolled)="incrementListSize()">
   <div class="artist-item" *ngFor="let artist of artists | async;">
     <app-card [image]="artist.image" [imageAlt]="artist.name" [link]="['/artists', artist.slug]" [linkText]="'See Artist'">
       <div class="title">

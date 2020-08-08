@@ -34,12 +34,11 @@ export class ArtistsAlbumPlayableComponent implements OnInit {
     // get these albums songs from the store.
     this.store.select('songs').pipe(
       filter(s => {
-        return s[this.album.id];
-      }),
+      return s[this.album.id];
+    }),
       map(a => {
-        return a[this.album.id];
-      })
-    ).subscribe(s => {
+      return a[this.album.id];
+    })).subscribe(s => {
       this.songs = s;
     });
 

@@ -21,7 +21,7 @@ export class ArtistListComponent implements OnInit {
   constructor(private store: Store<State>, private router: Router) {
     this.filters = store.select('filters');
     this.artists = store.select('artists').map((artists: ArtistStateType) => {
-      return artists.list.map(n => artists.items[n]);
+      return artists.list.map((n,i) => artists.items[i][n]);
     });
   }
 
@@ -34,11 +34,13 @@ export class ArtistListComponent implements OnInit {
 
   private createParams(filters: Filters): Params {
     const r: any = {};
+    console.log(filters.limit)
     if (filters.limit) { r.limit = filters.limit; }
     return r;
   }
 
   incrementListSize() {
+    console.log("scrolled");
     this.handleFiltersChange({
       limit: this.limit * 2
     });

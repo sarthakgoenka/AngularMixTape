@@ -1,4 +1,3 @@
-import { PlaylistAddSongComponent } from './../../components/playlist-add-song/playlist-add-song.component';
 import { Song } from './../../store/models/song.model';
 import { Album } from './../../store/models/album.model';
 import { Component, OnDestroy, OnInit } from '@angular/core';
@@ -11,7 +10,6 @@ import { State } from './../../store/index';
 import { Store } from '@ngrx/store';
 
 import { Artist } from './../../store/models/artist.model';
-import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-artist-detail',
@@ -25,15 +23,17 @@ export class ArtistDetailComponent implements OnInit, OnDestroy {
 
   artistSubscription: Subscription;
 
-  constructor(private route: ActivatedRoute, private store: Store<State>, public dialog: MatDialog, ) {
+  constructor(private route: ActivatedRoute, private store: Store<State>) {
     this.artistSubscription = store.select('artists').subscribe(artists => {
-      this.slug = route.snapshot.paramMap.get('slug');
-      this.artist = artists.items[this.slug];
+      this.slug = route.snapshot.params.slug;
+      const index = artists.list.indexOf(this.slug);
+      this.artist = artists.items[index][this.slug];
+    });
+    this.albums = store.select('albums').map(albums => {
+      console.log(albums[this.slug]);
+      return typeof albums[this.slug] !== 'undefined' ? Object.values(albums[this.slug]) : [];
     });
 
-    this.albums = store.select('albums').map(albums => {
-      return typeof albums[this.slug] !== 'undefined' ? albums[this.slug] : [];
-    });
   }
 
   ngOnInit() {
@@ -43,18 +43,12 @@ export class ArtistDetailComponent implements OnInit, OnDestroy {
     this.artistSubscription.unsubscribe();
   }
 
+  /**
+   * Add song to playlist.
+   *
+   * @param song
+   *  song to add.
+   */
   addSongToPlaylist(song: Song) {
-    const dialogRef = this.dialog.open(PlaylistAddSongComponent, {
-      width: '350px',
-      data: {
-        song: song,
-      }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-
-      }
-    });
   }
 }

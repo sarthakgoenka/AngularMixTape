@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
-import { PlayerControllerComponent } from './components/player-controller/player-controller.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
@@ -22,16 +21,14 @@ import {AngularFireAuthModule} from "@angular/fire/auth";
 import {UserModule} from "./user/user.module";
 import {EffectsModule} from "@ngrx/effects";
 import {AuthEffects} from "./store/effects/firebase/user.effects";
-import {ArtistsModule} from "./artists/artists.module";
 import {SharedModule} from "./shared/shared.module";
-import { PlaylistAddSongComponent } from './components/playlist-add-song/playlist-add-song.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {ArtistsEffects} from "./store/effects/firebase/artists.effects";
+import {StoreRouterConnectingModule} from "@ngrx/router-store";
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    PlaylistAddSongComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,14 +43,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features
     AngularFireAuthModule,
-    EffectsModule.forRoot([AuthEffects
+    EffectsModule.forRoot([AuthEffects,
+      ArtistsEffects
     ]),
-    StoreModule.forRoot(reducers, <any>initialState),
+    StoreModule.forRoot(reducers),
     UserModule,
-    ArtistsModule,
-    SharedModule,
-    FormsModule,
-    ReactiveFormsModule
+    SharedModule.forRoot(),
+    StoreRouterConnectingModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

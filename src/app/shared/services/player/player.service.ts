@@ -76,12 +76,12 @@ export class PlayerService {
   }
 
   /**
-    *
-    * Remove a song from the queue.
-    *
-    * @param song
-    *   The song to remove.
-    */
+   *
+   * Remove a song from the queue.
+   *
+   * @param song
+   *   The song to remove.
+   */
   removeQueueSong(song: Song) {
     const indexToRemove = this.songList.indexOf(song);
     if (this.playingIndex == indexToRemove) {

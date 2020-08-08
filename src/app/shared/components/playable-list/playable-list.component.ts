@@ -1,5 +1,5 @@
-import { Song } from './../../../store/models/song.model';
 import { Component, OnInit, Input, EventEmitter, Output, ContentChild, TemplateRef } from '@angular/core';
+import {Song} from "../../../store/models/song.model";
 
 @Component({
   selector: 'app-playable-list',

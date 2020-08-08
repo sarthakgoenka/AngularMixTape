@@ -1,6 +1,5 @@
 import { Router } from '@angular/router';
 import { UserLoginAction, UserLogoutAction, UserAuthAction, UserLoginSuccessAction } from './../../store/actions/user.action';
-import { USER_ACTION_TYPES } from './../../store/actions/user.action';
 
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase/app';

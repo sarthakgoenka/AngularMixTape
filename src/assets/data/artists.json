@@ -1,0 +1,134 @@
+{
+    "jason-derulo": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Folk": true,
+            "Pop": true,
+            "Rock": true
+        },
+        "image": "assets/images/artists/1.jpg",
+        "name": "Jason Derulo",
+        "slug": "jason-derulo"
+    },
+    "keane": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Chill": true,
+            "Groove": true,
+            "Jazz": true
+        },
+        "image": "assets/images/artists/2.jpg",
+        "name": "Keane",
+        "slug": "keane"
+    },
+    "kingofthemood": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Jazz": true,
+            "Rock": true,
+            "World": true
+        },
+        "image": "assets/images/artists/3.jpg",
+        "name": "King of the mood",
+        "slug": "kingofthemood"
+    },
+    "lafiestanegra": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Celtic": true,
+            "New age": true,
+            "World": true
+        },
+        "image": "assets/images/artists/4.jpg",
+        "name": "John Legend",
+        "slug": "lafiestanegra"
+    },
+    "lecrea-gravity": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Heavy": true,
+            "Metal": true,
+            "Rock": true
+        },
+        "image": "assets/images/artists/5.jpg",
+        "name": "Lecrea Gravity",
+        "slug": "lecrea-gravity"
+    },
+    "led-zeppelin": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Heavy": true,
+            "Metal": true,
+            "Rock": true
+        },
+        "image": "assets/images/artists/6.jpg",
+        "name": "Led Zeppelin",
+        "slug": "led-zeppelin"
+    },
+    "mark-ronson": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Electro": true,
+            "Metal": true,
+            "Rock": true
+        },
+        "image": "assets/images/artists/7.jpg",
+        "name": "Mark Ronson",
+        "slug": "mark-ronson"
+    },
+    "monty-are-i": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Electro": true,
+            "Metal": true,
+            "Rock": true
+        },
+        "image": "assets/images/artists/8.jpg",
+        "name": "Monty are I",
+        "slug": "monty-are-i"
+    },
+    "pharel-williams": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Electro": true,
+            "Metal": true,
+            "Rock": true
+        },
+        "image": "assets/images/artists/9.jpg",
+        "name": "Pharel Williams",
+        "slug": "pharel-williams"
+    },
+    "pink-floyd": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Electro": true,
+            "Metal": true,
+            "Rock": true
+        },
+        "image": "assets/images/artists/10.jpg",
+        "name": "Pink floyd",
+        "url_name": "pink-floyd"
+    },
+    "rolling-stones": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Electro": true,
+            "Metal": true,
+            "Rock": true
+        },
+        "image": "assets/images/artists/11.jpg",
+        "name": "Rolling stones",
+        "slug": "rolling-stones"
+    },
+    "wativ": {
+        "about": "Great music inspired by early electronic sounds, combining the symphony of classical instruments and complete surrounding",
+        "genre": {
+            "Classic": true,
+            "Orchestra": true,
+            "Piano": true
+        },
+        "image": "assets/images/artists/12.jpg",
+        "name": "Wativ",
+        "slug": "wativ"
+    }
+}

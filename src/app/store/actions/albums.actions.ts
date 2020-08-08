@@ -10,7 +10,8 @@ export const ALBUMS_ACTION_TYPES = {
 // actions
 export class AlbumsOfArtistUpdatedAction implements Action {
     type: string = ALBUMS_ACTION_TYPES.ALBUMS_OF_ARTIST_UPDATED;
-    constructor(public payload: any) { }
+    constructor(public payload: any) {
+    }
 }
 
 export type Actions = RouterAction<State> | AlbumsOfArtistUpdatedAction;

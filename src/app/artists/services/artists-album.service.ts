@@ -12,12 +12,7 @@ export class ArtistsAlbumService {
 
   constructor(private store: Store<State>, private player: PlayerService) { }
 
-  /**
-   * Get all songs from an album.
-   *
-   * @param albumId
-   *  the album identifier.
-   */
+
   getAlbumSongs(albumId) {
     this.store.dispatch({
       type: SONGS_ACTION_TYPES.SONGS_FROM_ALBUM,

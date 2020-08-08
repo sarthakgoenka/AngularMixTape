@@ -12,11 +12,9 @@ export const userInitialState:User = {
 export function userStoreReducer(state: User = userInitialState, action: Actions) {
   switch (action.type) {
     case USER_ACTION_TYPES.AUTH:
-      return Object.assign(state,
-        {
-          authenticated: true, username: action.payload.username,
-          user_image: action.payload.user_image, uid: action.payload.uid
-        });
+      const updatedState = {state, authenticated: true, username: action.payload.username,
+        user_image: action.payload.user_image, uid: action.payload.uid }
+      return updatedState;
 
     case USER_ACTION_TYPES.UNAUTH:
       return Object.assign(state, { authenticated: false, username: '', user_image: '' });

@@ -1,0 +1,27 @@
+<div *ngIf="(queue | async)?.length; else elseBlock">
+  <h1>
+    Play queue
+  </h1>
+  <app-playable-list [title]="'Queue'" [info]="'Queue playing currently'" [playAllExists]="false" [removeAllExists]="true" [songs]="queue | async" (onPlayItem)="playSong($event)" (onRemoveAll)="removeAll()">
+    <ng-template let-song>
+      <button class="add-to-playlist-button" mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="removeSongFromQueue(song)">
+          <mat-icon>clear</mat-icon>
+          <span>Remove from Queue</span>
+        </button>
+      </mat-menu>
+    </ng-template>
+  </app-playable-list>
+</div>
+<ng-template #elseBlock>
+  <div class="empty">
+    <mat-icon class="empty-icon" color="primary">queue_music</mat-icon>
+    <h3 class="empty-text">
+      Your queue is empty. Start browing artists and albums and set play to add the to your current queue.
+    </h3>
+    <a mat-button mat-raised-button [routerLink]="'/artists'" color="primary">Browse artists</a>
+  </div>
+</ng-template>

@@ -6,9 +6,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
-
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-
 import { AuthService } from './services/auth.service';
 import { PlayerService } from './services/player/player.service';
 
@@ -16,7 +13,6 @@ import { MapToIterable } from './pipes/mapToIterable';
 
 import { CardComponent } from './components/card/card.component';
 import { PlayCardComponent } from './../components/play-card/play-card.component';
-import { PlayerControllerComponent } from './../components/player-controller/player-controller.component';
 
 import { PlaylistService } from './services/playlist/playlist.service';
 import { ViewerBoxComponent } from './components/viewer-box/viewer-box.component';
@@ -30,17 +26,19 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatChipsModule} from "@angular/material/chips";
-import {MatTabsModule} from "@angular/material/tabs";
-import {MatMenuModule} from "@angular/material/menu";
-import {MatSliderModule} from "@angular/material/slider";
 import {MatCardModule} from "@angular/material/card";
+import {MatSliderModule} from "@angular/material/slider";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatTabsModule} from "@angular/material/tabs";
 import {MatRadioModule} from "@angular/material/radio";
 import {MatListModule} from "@angular/material/list";
+import {MatMenuModule} from "@angular/material/menu";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatInputModule} from "@angular/material/input";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {PlayerControllerComponent} from "../components/player-controller/player-controller.component";
+import {InfiniteScrollModule} from "ngx-infinite-scroll";
 
 const SHARED_MODULES = [
   CommonModule,
@@ -55,8 +53,8 @@ const SHARED_MODULES = [
   MatSliderModule,
   MatDialogModule,
   MatTooltipModule,
-  MatListModule,
   MatRadioModule,
+  MatListModule,
   MatMenuModule,
   MatTabsModule,
   MatCheckboxModule,
@@ -81,13 +79,11 @@ const SHARED_COMPONENTS = [
 ];
 
 const SHARED_PIPES = [
-  MapToIterable,
 ];
 
 @NgModule({
   imports: [
     ...SHARED_MODULES,
-    ReactiveFormsModule
   ],
   declarations: [
     ...SHARED_COMPONENTS,
@@ -111,9 +107,3 @@ export class SharedModule {
     };
   }
 }
-// declare module "@angular/core" {
-//   interface ModuleWithProviders<T = any> {
-//     ngModule: Type<T>;
-//     providers?: Provider[];
-//   }
-// }

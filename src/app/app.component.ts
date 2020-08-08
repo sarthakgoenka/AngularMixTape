@@ -53,11 +53,6 @@ export class AppComponent implements OnInit{
         }
       }
     });
-    this.store.select('user').subscribe(user=>{
-      console.log("adfasf")
-      console.log(user);
-    })
-    this.user = this.store.select('user');
     if (this.darkTheme) {
       this.overlayContainer.getContainerElement().classList.add('sangeet-dark-theme');
     }
@@ -70,9 +65,9 @@ export class AppComponent implements OnInit{
   updateSidenavForWindow() {
     if (this.isMobile()) {
       this.navMode = 'over';
-      this.sidenav.close();
+      // this.sidenav.close();
     } else {
-      this.sidenav.open();
+      // this.sidenav.open();
       this.playerCollapsed = false;
     }
   }

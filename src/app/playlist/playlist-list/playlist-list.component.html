@@ -1,0 +1,18 @@
+<h1>
+  Explore playlists
+</h1>
+<div class="playlist-list" infinite-scroll [infiniteScrollContainer]="'.mat-sidenav-content'" [infiniteScrollDistance]="2"
+  [immediateCheck]="true" (scrolled)="incrementListSize()">
+  <div class="playlist-item" *ngFor="let playlist of playlists$ | async;">
+    <app-card [image]="playlist.image" [imageAlt]="playlist.name" [link]="['/playlists/detail', playlist.id]" [linkText]="'See Playlist'">
+      <div class="title">
+        <a [routerLink]="['/playlists/detail', playlist.id]" class="playlist-name-link">{{playlist.name}}</a>
+      </div>
+      <div class="subtitle">
+        <div>
+          Playlist by {{ playlist.owner }}
+        </div>
+      </div>
+    </app-card>
+  </div>
+</div>

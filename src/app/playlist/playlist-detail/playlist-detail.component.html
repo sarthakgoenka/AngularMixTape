@@ -1,0 +1,20 @@
+<div class="playlist" *ngIf="playlist$ | async as playlist">
+  <div class="playlist-banner">
+    <div class="arist-banner-name">
+      <h1>{{playlist.name}}</h1>
+      <br/>
+      <a [color]="'primary'" mat-button mat-raised-button [routerLink]="'/'">
+        <mat-icon>play_circle_outline</mat-icon> Play songs</a>
+    </div>
+    <img [src]="playlist.image" [alt]="playlist.name" [title]="playlist.name" />
+  </div>
+  <div class="playlist-content">
+    <div class="playlist-songs">
+      <app-playlist-songs-playable [playlist]="playlist$ | async" [songs]="songs$ | async" (onPlayAll)="playAllSongs($event)"
+        (onPlaySong)="playSong($event)"></app-playlist-songs-playable>
+    </div>
+    <div class="side-blocks">
+
+    </div>
+  </div>
+</div>

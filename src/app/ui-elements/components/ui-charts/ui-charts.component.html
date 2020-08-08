@@ -1,0 +1,64 @@
+<div class="charts-wrapper">
+  <div class="charts-column">
+    <mat-card>
+      <div class="chart-wrapper">
+        <ngx-charts-advanced-pie-chart [scheme]="colorScheme" [results]="data" [label]="label">
+        </ngx-charts-advanced-pie-chart>
+      </div>
+    </mat-card>
+    <br/>
+    <mat-card>
+      <div class="chart-wrapper area-wrapper">
+        <ngx-charts-area-chart [scheme]="colorScheme" [results]="areaData" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis"
+          [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel" [autoScale]="true">
+        </ngx-charts-area-chart>
+      </div>
+    </mat-card>
+    <br/>
+    <mat-card>
+      <div class="chart-wrapper polar-chart">
+        <ngx-charts-polar-chart [scheme]="colorScheme" [results]="polarData" [legend]="showLegend" [legendTitle]="legendTitle" [gradient]="gradient"
+          [xAxis]="showXAxis" [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel" [autoScale]="autoScale" [showGridLines]="showGridLines" [rangeFillOpacity]="rangeFillOpacity"
+          [roundDomains]="roundDomains" [tooltipDisabled]="tooltipDisabled" [showSeriesOnHover]="showSeriesOnHover" [curve]="closedCurve">
+        </ngx-charts-polar-chart>
+      </div>
+    </mat-card>
+  </div>
+  <div class="charts-column">
+    <mat-card>
+      <div class="chart-wrapper gauge-wrapper">
+        <ngx-charts-gauge [scheme]="colorScheme" [results]="gaugeData" [min]="0" [max]="100" [angleSpan]="240" [startAngle]="-120"
+          [units]="'alerts'" [bigSegments]="10" [smallSegments]="5">
+        </ngx-charts-gauge>
+      </div>
+    </mat-card>
+    <br/>
+    <mat-card>
+      <div class="chart-wrapper pie-chart">
+        <ngx-charts-pie-chart [scheme]="colorScheme" [results]="pieData" [legend]="showLegend" [explodeSlices]="explodeSlices" [labels]="true"
+          [doughnut]="doughnut" [gradient]="gradient">
+        </ngx-charts-pie-chart>
+      </div>
+    </mat-card>
+    <br/>
+    <mat-card>
+      <div class="chart-wrapper">
+        <ngx-charts-bar-vertical [scheme]="colorScheme" [results]="barData" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis"
+          [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel">
+        </ngx-charts-bar-vertical>
+      </div>
+    </mat-card>
+    <br/>
+    <mat-card>
+      <div class="chart-wrapper">
+        <ngx-charts-bar-horizontal [scheme]="colorScheme" [results]="barData" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis"
+          [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel">
+        </ngx-charts-bar-horizontal>
+      </div>
+    </mat-card>
+  </div>
+</div>

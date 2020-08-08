@@ -18,8 +18,10 @@ export function artistsStoreReducer(state: ArtistStateType = artistsInitialState
 
         case ARTISTS_ACTION_TYPES.ARTIST_UPDATED:
             const artists = { ...state };
-            artists.items[action.payload.slug] = action.payload;
-            // artists.list = [...artists.list, action.payload.slug];
+            console.log(artists)
+          console.log(action.payload);
+              // artists.items[action.payload.slug] = action.payload;
+              // artists.list = [...artists.list, action.payload.slug];
             return { ...artists };
 
         default:

@@ -1,0 +1,10 @@
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+.icon {
+    margin: 20px;
+    mat-icon {
+        font-size: 30px;
+    }
+}

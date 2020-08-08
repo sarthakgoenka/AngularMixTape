@@ -1,5 +1,7 @@
 import {Component, OnInit, EventEmitter, Output, Input} from '@angular/core';
 import {User} from "../../store/models/user.model";
+import {Store} from "@ngrx/store";
+import {State} from "../../store";
 
 @Component({
   selector: 'app-header',
@@ -8,15 +10,19 @@ import {User} from "../../store/models/user.model";
 })
 export class HeaderComponent implements OnInit {
   @Input() title: string;
-  @Input() user: User;
+  user: User;
 
   @Output() onLogout = new EventEmitter();
   @Output() oncreatePlaylist = new EventEmitter();
   @Output() onToggleSidenav = new EventEmitter();
   @Output() onToggleTheme = new EventEmitter();
 
-  constructor() { }
+  constructor(  private store: Store<State>,) { }
   ngOnInit() {
+    this.store.select('user').subscribe(user=>{
+      console.log(user);
+      this.user = user;
+    })
   }
 
   logout() {

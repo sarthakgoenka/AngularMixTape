@@ -3,11 +3,10 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArtistListComponent } from './artist-list/artist-list.component';
+import { SharedModule } from './../shared/shared.module';
 import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
 import { ArtistAlbumListComponent } from './artist-album-list/artist-album-list.component';
 import { ArtistsAlbumPlayableComponent } from './artists-album-playable/artists-album-playable.component';
-import {SharedModule} from "../shared/shared.module";
-// import { ArtistCountryFanChartComponent } from './artist-country-fan-chart/artist-country-fan-chart.component';
 
 export const routes = [
   { path: '', component: ArtistListComponent, pathMatch: 'full' },
@@ -17,15 +16,15 @@ export const routes = [
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(routes),
-    SharedModule
   ],
   declarations: [ArtistListComponent,
     ArtistDetailComponent,
     ArtistAlbumListComponent,
     ArtistsAlbumPlayableComponent,
-    // ArtistCountryFanChartComponent
   ],
   providers: [ArtistsAlbumService]
 })
-export class ArtistsModule { }
+export class ArtistsModule {
+}

@@ -1,0 +1,24 @@
+@import "./../../../../styles/settings/colors.scss";
+@import "./../../../../styles/settings/breakpoints.scss";
+.empty {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include breakpoint($narrow-devices) {
+        margin-top: 15vh;
+    }
+}
+
+.empty-icon {
+    font-size: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.empty-text {
+    @include breakpoint($narrow-devices) {
+        max-width: 40%;
+    }
+    text-align: center;
+    line-height: 2rem;
+}

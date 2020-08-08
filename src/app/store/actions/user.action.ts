@@ -27,7 +27,9 @@ export class UserLoginSuccessAction implements Action {
 
 export class UserAuthAction implements Action {
     type: string = USER_ACTION_TYPES.AUTH;
-    constructor(public payload: any) { }
+    constructor(public payload: any) {
+      // console.log(payload)
+    }
 }
 
 export class UserUnauthAction implements Action {
