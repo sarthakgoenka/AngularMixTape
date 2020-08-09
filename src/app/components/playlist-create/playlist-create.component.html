@@ -4,10 +4,12 @@
   <mat-list>
     <mat-list-item>
       <label mat-mini-fab mat-list-avatar>
-        <a aria-role="button" class="upload-image" mat-button mat-raised-button color="accent" tabindex="2" (click)="submitDialog()">
+        <a aria-role="button" class="upload-image" mat-button mat-raised-button color="accent"
+           tabindex="2" (click)="onClickButton()">
           Upload image
+
         </a>
-        <input #file type="file" (change)="onFileChange($event)" [style.display]="'none'">
+          <input #file type="file" (change)="onFileChange($event)" [style.display]="'none'">
       </label>
       <h4 mat-line class="file-text">
         <span>{{file.value}}</span>

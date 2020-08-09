@@ -6,6 +6,7 @@ import { State } from './../../store/index';
 import { Store } from '@ngrx/store';
 import { Playlist } from './../../store/models/playlist.model';
 import { Component, OnInit } from '@angular/core';
+import {switchMap} from "rxjs/operators";
 
 @Component({
   selector: 'app-playlist-detail',
@@ -20,9 +21,10 @@ export class PlaylistDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private playlistService: PlaylistService) {
     this.id = route.snapshot.paramMap.get('id');
-    this.playlist$ = this.store.select('playlists').switchMap((playlist: Playlist[]) => {
+    this.playlist$ = this.store.select('playlists').pipe(
+      switchMap((playlist: Playlist[]) => {
       return playlist.filter(playlistObj => playlistObj.id === this.id);
-    });
+    }));
 
     // Get songs from store.
     this.songs$ = this.store.select('songs').map((songs: Object) => {

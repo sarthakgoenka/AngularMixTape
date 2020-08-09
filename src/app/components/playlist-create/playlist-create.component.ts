@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import {Component, OnInit, Inject, ViewChild, ElementRef} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-playlist-create',
@@ -8,6 +8,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class PlaylistCreateComponent implements OnInit {
   Uploadfiles: FileList;
+  @ViewChild('file') fileinput:ElementRef;
 
   constructor(
     private dialogRef: MatDialogRef<PlaylistCreateComponent>,
@@ -17,9 +18,6 @@ export class PlaylistCreateComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  /**
-   * Programatically submit and close the dialog.
-   */
   submitDialog() {
     this.uploadImage();
     this.dialogRef.close(this.data);
@@ -28,12 +26,14 @@ export class PlaylistCreateComponent implements OnInit {
   uploadImage() {
     // Move to side effects
     Object.assign(this.data, { file: this.Uploadfiles[0] });
+    console.log(this.data)
+  }
+  onClickButton(){
+    this.fileinput.nativeElement.click();
   }
 
-  /**
-   * Save the files uploaded to the upload widget.
-   */
   onFileChange(ev) {
+    console.log(this.fileinput)
     this.Uploadfiles = ev.target.files;
   }
 

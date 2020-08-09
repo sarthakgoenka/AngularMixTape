@@ -24,11 +24,21 @@ import {AuthEffects} from "./store/effects/firebase/user.effects";
 import {SharedModule} from "./shared/shared.module";
 import {ArtistsEffects} from "./store/effects/firebase/artists.effects";
 import {StoreRouterConnectingModule} from "@ngrx/router-store";
+import {PlaylistCreateComponent} from "./components/playlist-create/playlist-create.component";
+import {PlaylistAddSongComponent} from "./components/playlist-add-song/playlist-add-song.component";
+import {CommonModule} from "@angular/common";
+import {PlaylistEffect} from "./store/effects/firebase/playlist.effect";
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
+    PlaylistCreateComponent,
+    PlaylistAddSongComponent,
+  ],
+  entryComponents: [
+    PlaylistCreateComponent,
+    PlaylistAddSongComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,12 +54,14 @@ import {StoreRouterConnectingModule} from "@ngrx/router-store";
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features
     AngularFireAuthModule,
     EffectsModule.forRoot([AuthEffects,
-      ArtistsEffects
+      ArtistsEffects,
+      PlaylistEffect
     ]),
     StoreModule.forRoot(reducers),
     UserModule,
+    CommonModule,
     SharedModule.forRoot(),
-    StoreRouterConnectingModule.forRoot(),
+    StoreRouterConnectingModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

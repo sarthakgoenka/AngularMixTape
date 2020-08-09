@@ -7,6 +7,7 @@ import { SharedModule } from './../shared/shared.module';
 import { ArtistDetailComponent } from './artist-detail/artist-detail.component';
 import { ArtistAlbumListComponent } from './artist-album-list/artist-album-list.component';
 import { ArtistsAlbumPlayableComponent } from './artists-album-playable/artists-album-playable.component';
+import {ArtistCountryFanChartComponent} from "./artist-country-fan-chart/artist-country-fan-chart.component";
 
 export const routes = [
   { path: '', component: ArtistListComponent, pathMatch: 'full' },
@@ -20,6 +21,7 @@ export const routes = [
     RouterModule.forChild(routes),
   ],
   declarations: [ArtistListComponent,
+    ArtistCountryFanChartComponent,
     ArtistDetailComponent,
     ArtistAlbumListComponent,
     ArtistsAlbumPlayableComponent,

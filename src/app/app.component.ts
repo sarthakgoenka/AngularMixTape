@@ -8,6 +8,9 @@ import {State} from "./store/index";
 import {AuthService} from "./shared/services/auth.service";
 import {Observable} from "rxjs";
 import {User} from "./store/models/user.model";
+import {PlaylistCreateComponent} from "./components/playlist-create/playlist-create.component";
+import {MatDialog} from "@angular/material/dialog";
+import {PlaylistService} from "./shared/services/playlist/playlist.service";
 
 @Component({
   selector: 'app-root',
@@ -34,8 +37,12 @@ export class AppComponent implements OnInit{
   constructor(private auth: AuthService,
               private store: Store<State>,
               private overlayContainer: OverlayContainer,
-              private router: Router
-  ) {
+              private router: Router,
+              private playListService: PlaylistService,
+
+              public dialog: MatDialog
+
+) {
 
   }
 
@@ -59,6 +66,18 @@ export class AppComponent implements OnInit{
   }
 
   createPlaylist(): void {
+    const dialogRef = this.dialog.open(PlaylistCreateComponent, {
+      width: '350px',
+      data: {
+        name: 'My playlist name',
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.playListService.createPlaylist(result.name, result.file);
+      }
+    });
 
   }
 
