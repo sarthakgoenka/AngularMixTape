@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {PlaylistModule} from "./playlist/playlist.module";
+
 
 
 const routes: Routes = [
