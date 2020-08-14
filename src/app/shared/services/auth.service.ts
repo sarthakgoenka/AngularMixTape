@@ -20,6 +20,7 @@ export class AuthService {
     private router: Router) {
     afAuth.authState.subscribe((user) => {
       this.setUser(user);
+      console.log(user)
     });
   }
 
